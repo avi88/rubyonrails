@@ -1,0 +1,57 @@
+<%= form_with(model: register, local: true) do |form| %>
+  <% if register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+      <ul>
+      <% register.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :First %>
+    <%= form.text_field :First %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Last %>
+    <%= form.text_field :Last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :Email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Phone %>
+    <%= form.text_field :Phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Password %>
+    <%= form.text_field :Password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Zip %>
+    <%= form.text_field :Zip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
